@@ -1,0 +1,220 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "pertemuanBaru",
+				"type": "uint256"
+			}
+		],
+		"name": "PertemuanDiperbarui",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "verifikator",
+				"type": "address"
+			}
+		],
+		"name": "PresensiDiverifikasi",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "nimHash",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "pertemuanKe",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "waktuHadir",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "pengirim",
+				"type": "address"
+			}
+		],
+		"name": "PresensiTercatat",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "admin",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "ambilPresensi",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "nimHash",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pertemuanKe",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "waktuHadir",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "pengirim",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "terverifikasi",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_nimHash",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pertemuanKe",
+				"type": "uint256"
+			}
+		],
+		"name": "catatPresensi",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "jumlahPresensi",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "sudahHadir",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pertemuanBaru",
+				"type": "uint256"
+			}
+		],
+		"name": "ubahPertemuan",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "verifikasiPresensi",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
